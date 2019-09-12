@@ -4,7 +4,7 @@
 
 This project is meant to be an exercise of database design by creating the Model part of the MVC for a simple Reddit clone. The structure is as follows:
 
-<img src="auxiliar/db-design.svg" width=500>
+<img src="auxiliar/db-design.svg" width="80%" style="margin-left: 10%">
 
 ## Users:
   Users table will contain an id and a name, and will have a One-To-Many relation to Posts, and also a One-To-Many to Comments. It will also contain an index for the id.
