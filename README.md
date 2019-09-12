@@ -1,24 +1,16 @@
-# README
+# Toy clone of Reddit
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Authors: [Mauricio Robayo](https://github.com/MauricioRobayo) & [Oscar Nava](https://github.com/oscarnava/)
 
-Things you may want to cover:
+This project is meant to be an exercise of database design by creating the Model part of the MVC for a simple Reddit clone. The structure is as follows:
 
-* Ruby version
+<img src="auxiliar/db-design.svg" width="50%" align="right">
 
-* System dependencies
+## Users:
+  Users table will contain an id and a name, and will have a One-To-Many relation to Posts, and also a One-To-Many to Comments. It will also contain an index for the id.
 
-* Configuration
+## Posts:
+  Posts table will contain an id, a content and a user_id, which will link it to the owner of the post. Will have a relation of Many-To-One with Users and a relation of One-To-Many with Comments. Also it will contain an index for the id, and another for the user_id.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Comments:
+  Comments table will contain an id, a comment and two fields, user_id and post_id, which will link it to the Users and Posts tables. Will have a Many-To-One relation with Users as for Posts, and will have indexes for the id, the user_id and the post_id.
